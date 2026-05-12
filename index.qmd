@@ -1,0 +1,137 @@
+---
+title: "Voices Across Borders: "
+subtitle: "Analyzing Public Discourse in the Latvian Emigration Press"
+author: "Timur Mitrofanov"
+date: "May 29, 2026"
+format:
+  revealjs:
+    theme: white
+    slide-number: true
+    progress: true
+    transition: slide
+    controls: true
+    width: 1400
+    height: 800
+    footer: "Voices Across Borders · Timur Mitrofanov"
+    embed-resources: false
+---
+
+## Token Analysis
+
+```{=html}
+<iframe src="results_token_analysis.html" width="100%" height="680px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+---
+
+## Topic Word Scores
+
+::: {.panel-tabset}
+
+### Multigram
+```{=html}
+<iframe src="multi-gram_topic_word_scores.html" width="100%" height="620px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+### Unigram
+```{=html}
+<iframe src="unigram_topic_word_scores.html" width="100%" height="620px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+### Bigram
+```{=html}
+<iframe src="bigram_topic_word_scores.html" width="100%" height="620px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+### Trigram
+```{=html}
+<iframe src="trigram_topic_word_scores.html" width="100%" height="620px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+:::
+
+## Intertopic Distance Map 
+
+::: {.panel-tabset}
+
+### Multigram
+```{=html}
+<iframe src="multi-gram_intertopic_distance_map.html" width="100%" height="680px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+### Unigram
+```{=html}
+<iframe src="unigram_intertopic_distance_map.html" width="100%" height="680px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+### Bigram
+```{=html}
+<iframe src="bigram_intertopic_distance_map.html" width="100%" height="680px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+### Trigram
+```{=html}
+<iframe src="trigram_intertopic_distance_map.html" width="100%" height="680px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+:::
+
+## Topics Over Time
+
+::: {.panel-tabset}
+
+### Multigram
+```{=html}
+<iframe src="multi-gram_topics_over_time.html" width="100%" height="680px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+### Unigram
+```{=html}
+<iframe src="unigram_topics_over_time.html" width="100%" height="680px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+### Bigram
+```{=html}
+<iframe src="bigram_topics_over_time.html" width="100%" height="680px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+### Trigram
+```{=html}
+<iframe src="trigram_topics_over_time.html" width="100%" height="680px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+:::
+
+## Hierarchical Clustering (multigram)
+
+```{=html}
+<iframe src="nested_bertopic.html" width="100%" height="680px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+
+## Geographical and Geopolitical entities
+
+```{=html}
+<iframe src="Map_journal_origins_2.html" width="100%" height="680px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+## Most Mentioned Country by Month and Year
+```{=html}
+<iframe src="country_mentions_interactive.html" width="100%" height="680px"
+  style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```

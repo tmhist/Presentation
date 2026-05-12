@@ -1,0 +1,223 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Token Analysis Results</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; }
+h1 { text-align: center; }
+
+.main-tables-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; 
+    margin-bottom: 40px; 
+    padding: 0 5%; 
+}
+
+.table-wrapper { 
+    display: flex; 
+    flex-direction: column;
+}
+.table { border-collapse: collapse; width: 100%; }
+.table th, .table td { 
+    border: 1px solid #ccc; 
+    padding: 6px 8px; 
+    text-align:left;
+    font-size: 14px; 
+}
+.col-title { font-size: 20px; margin-bottom: 8px; font-weight: bold; }
+
+.carousel-pair-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.carousel-container {
+    max-width: 50%; 
+    flex: 1; 
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    padding: 20px 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.decade-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.decade-item h3 {
+    font-size: 22px; 
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.decade-content {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.chart-wrapper, .table-wrapper-decade {
+    flex: 1;
+    min-width: 48%;
+    max-width: 48%;
+}
+
+.table-wrapper-decade .table th, .table-wrapper-decade .table td {
+    font-size: 13px; 
+    padding: 4px 6px;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: calc(100% - 20px); 
+    left: 10px; 
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+    padding: 0; 
+    z-index: 101; 
+}
+
+.nav-button {
+    pointer-events: auto; 
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    transition: background 0.2s;
+}
+
+.nav-button:hover { background: rgba(0, 0, 0, 0.8); }
+
+</style>
+</head>
+<body>
+<h1>Token Analysis Results</h1>
+
+<div class="main-tables-grid">
+    <div class="table-wrapper">
+        <div class="col-title">Top 50 Words</div>
+        <table class="table">
+        <tr><th>#</th><th>Word</th><th>Count</th></tr>
+        <tr><td>1</td><td>latvia</td><td>17988</td></tr><tr><td>2</td><td>latvian</td><td>16614</td></tr><tr><td>3</td><td>soviet</td><td>11860</td></tr><tr><td>4</td><td>baltic</td><td>8529</td></tr><tr><td>5</td><td>one</td><td>7273</td></tr><tr><td>6</td><td>people</td><td>6782</td></tr><tr><td>7</td><td>states</td><td>6138</td></tr><tr><td>8</td><td>new</td><td>5882</td></tr><tr><td>9</td><td>also</td><td>5348</td></tr><tr><td>10</td><td>russian</td><td>5195</td></tr><tr><td>11</td><td>would</td><td>5115</td></tr><tr><td>12</td><td>world</td><td>4880</td></tr><tr><td>13</td><td>government</td><td>4617</td></tr><tr><td>14</td><td>said</td><td>4453</td></tr><tr><td>15</td><td>union</td><td>4432</td></tr><tr><td>16</td><td>state</td><td>4371</td></tr><tr><td>17</td><td>time</td><td>4282</td></tr><tr><td>18</td><td>year</td><td>4151</td></tr><tr><td>19</td><td>first</td><td>4144</td></tr><tr><td>20</td><td>russia</td><td>3865</td></tr><tr><td>21</td><td>years</td><td>3821</td></tr><tr><td>22</td><td>riga</td><td>3744</td></tr><tr><td>23</td><td>war</td><td>3699</td></tr><tr><td>24</td><td>many</td><td>3623</td></tr><tr><td>25</td><td>minister</td><td>3619</td></tr><tr><td>26</td><td>foreign</td><td>3519</td></tr><tr><td>27</td><td>countries</td><td>3477</td></tr><tr><td>28</td><td>president</td><td>3431</td></tr><tr><td>29</td><td>may</td><td>3396</td></tr><tr><td>30</td><td>two</td><td>3326</td></tr><tr><td>31</td><td>estonia</td><td>3307</td></tr><tr><td>32</td><td>latvians</td><td>3181</td></tr><tr><td>33</td><td>country</td><td>3111</td></tr><tr><td>34</td><td>national</td><td>3096</td></tr><tr><td>35</td><td>well</td><td>3079</td></tr><tr><td>36</td><td>work</td><td>3070</td></tr><tr><td>37</td><td>even</td><td>3054</td></tr><tr><td>38</td><td>lithuania</td><td>3051</td></tr><tr><td>39</td><td>us</td><td>3010</td></tr><tr><td>40</td><td>could</td><td>2998</td></tr><tr><td>41</td><td>party</td><td>2891</td></tr><tr><td>42</td><td>mr</td><td>2768</td></tr><tr><td>43</td><td>day</td><td>2691</td></tr><tr><td>44</td><td>united</td><td>2653</td></tr><tr><td>45</td><td>communist</td><td>2620</td></tr><tr><td>46</td><td>three</td><td>2613</td></tr><tr><td>47</td><td>political</td><td>2566</td></tr><tr><td>48</td><td>like</td><td>2504</td></tr><tr><td>49</td><td>nations</td><td>2490</td></tr><tr><td>50</td><td>last</td><td>2489</td></tr>
+        </table>
+    </div>
+    <div class="table-wrapper">
+        <div class="col-title">Top 50 Bigrams</div>
+        <table class="table">
+        <tr><th>#</th><th>Bigram</th><th>Count</th></tr>
+        <tr><td>1</td><td>soviet union</td><td>3111</td></tr><tr><td>2</td><td>baltic states</td><td>2494</td></tr><tr><td>3</td><td>united states</td><td>1519</td></tr><tr><td>4</td><td>prime minister</td><td>1192</td></tr><tr><td>5</td><td>human rights</td><td>998</td></tr><tr><td>6</td><td>world war</td><td>852</td></tr><tr><td>7</td><td>baltie states</td><td>733</td></tr><tr><td>8</td><td>communist party</td><td>700</td></tr><tr><td>9</td><td>foreign minister</td><td>675</td></tr><tr><td>10</td><td>united nations</td><td>658</td></tr><tr><td>11</td><td>estonia latvia</td><td>654</td></tr><tr><td>12</td><td>new york</td><td>648</td></tr><tr><td>13</td><td>last year</td><td>625</td></tr><tr><td>14</td><td>per cent</td><td>541</td></tr><tr><td>15</td><td>co operation</td><td>536</td></tr><tr><td>16</td><td>foreign affairs</td><td>520</td></tr><tr><td>17</td><td>baltic countries</td><td>481</td></tr><tr><td>18</td><td>years ago</td><td>473</td></tr><tr><td>19</td><td>latvian people</td><td>455</td></tr><tr><td>20</td><td>european union</td><td>425</td></tr><tr><td>21</td><td>eastern europe</td><td>396</td></tr><tr><td>22</td><td>latvian government</td><td>390</td></tr><tr><td>23</td><td>million lats</td><td>388</td></tr><tr><td>24</td><td>took place</td><td>384</td></tr><tr><td>25</td><td>armed forces</td><td>383</td></tr><tr><td>26</td><td>soviet occupation</td><td>371</td></tr><tr><td>27</td><td>latvian language</td><td>368</td></tr><tr><td>28</td><td>baltic sea</td><td>361</td></tr><tr><td>29</td><td>three baltic</td><td>358</td></tr><tr><td>30</td><td>latvian national</td><td>342</td></tr><tr><td>31</td><td>iron curtain</td><td>329</td></tr><tr><td>32</td><td>latvian community</td><td>323</td></tr><tr><td>33</td><td>latvia lithuania</td><td>314</td></tr><tr><td>34</td><td>soviet russia</td><td>307</td></tr><tr><td>35</td><td>red army</td><td>306</td></tr><tr><td>36</td><td>foreign ministry</td><td>292</td></tr><tr><td>37</td><td>free world</td><td>290</td></tr><tr><td>38</td><td>russian federation</td><td>288</td></tr><tr><td>39</td><td>take place</td><td>286</td></tr><tr><td>40</td><td>popular front</td><td>286</td></tr><tr><td>41</td><td>foreign policy</td><td>281</td></tr><tr><td>42</td><td>two years</td><td>268</td></tr><tr><td>43</td><td>soviet government</td><td>268</td></tr><tr><td>44</td><td>first time</td><td>266</td></tr><tr><td>45</td><td>self determination</td><td>258</td></tr><tr><td>46</td><td>baltic republics</td><td>256</td></tr><tr><td>47</td><td>occupied latvia</td><td>255</td></tr><tr><td>48</td><td>supreme soviet</td><td>254</td></tr><tr><td>49</td><td>latvian president</td><td>251</td></tr><tr><td>50</td><td>supreme council</td><td>251</td></tr>
+        </table>
+    </div>
+    <div class="table-wrapper">
+        <div class="col-title">Top 50 Adjectives</div>
+        <table class="table">
+        <tr><th>#</th><th>Adjective</th><th>Count</th></tr>
+        <tr><td>1</td><td>latvian</td><td>16252</td></tr><tr><td>2</td><td>soviet</td><td>11840</td></tr><tr><td>3</td><td>baltic</td><td>8401</td></tr><tr><td>4</td><td>new</td><td>5882</td></tr><tr><td>5</td><td>russian</td><td>4979</td></tr><tr><td>6</td><td>latvia</td><td>4378</td></tr><tr><td>7</td><td>many</td><td>3623</td></tr><tr><td>8</td><td>foreign</td><td>3519</td></tr><tr><td>9</td><td>first</td><td>3463</td></tr><tr><td>10</td><td>national</td><td>3096</td></tr><tr><td>11</td><td>political</td><td>2566</td></tr><tr><td>12</td><td>united</td><td>2564</td></tr><tr><td>13</td><td>last</td><td>2489</td></tr><tr><td>14</td><td>european</td><td>2339</td></tr><tr><td>15</td><td>free</td><td>2194</td></tr><tr><td>16</td><td>international</td><td>2155</td></tr><tr><td>17</td><td>great</td><td>2109</td></tr><tr><td>18</td><td>old</td><td>1953</td></tr><tr><td>19</td><td>american</td><td>1878</td></tr><tr><td>20</td><td>german</td><td>1837</td></tr><tr><td>21</td><td>economic</td><td>1786</td></tr><tr><td>22</td><td>military</td><td>1708</td></tr><tr><td>23</td><td>human</td><td>1699</td></tr><tr><td>24</td><td>western</td><td>1558</td></tr><tr><td>25</td><td>estonian</td><td>1528</td></tr><tr><td>26</td><td>former</td><td>1484</td></tr><tr><td>27</td><td>good</td><td>1448</td></tr><tr><td>28</td><td>general</td><td>1422</td></tr><tr><td>29</td><td>lithuanian</td><td>1403</td></tr><tr><td>30</td><td>prime</td><td>1319</td></tr><tr><td>31</td><td>communist</td><td>1312</td></tr><tr><td>32</td><td>second</td><td>1255</td></tr><tr><td>33</td><td>several</td><td>1228</td></tr><tr><td>34</td><td>young</td><td>1218</td></tr><tr><td>35</td><td>central</td><td>1203</td></tr><tr><td>36</td><td>small</td><td>1180</td></tr><tr><td>37</td><td>important</td><td>1171</td></tr><tr><td>38</td><td>high</td><td>1170</td></tr><tr><td>39</td><td>present</td><td>1161</td></tr><tr><td>40</td><td>australian</td><td>1142</td></tr><tr><td>41</td><td>large</td><td>1136</td></tr><tr><td>42</td><td>public</td><td>1127</td></tr><tr><td>43</td><td>social</td><td>1086</td></tr><tr><td>44</td><td>independent</td><td>1060</td></tr><tr><td>45</td><td>special</td><td>1038</td></tr><tr><td>46</td><td>long</td><td>1016</td></tr><tr><td>47</td><td>english</td><td>1008</td></tr><tr><td>48</td><td>possible</td><td>976</td></tr><tr><td>49</td><td>next</td><td>972</td></tr><tr><td>50</td><td>red</td><td>972</td></tr>
+        </table>
+    </div>
+    <div class="table-wrapper">
+        <div class="col-title">Top 50 Verbs</div>
+        <table class="table">
+        <tr><th>#</th><th>Verb</th><th>Count</th></tr>
+        <tr><td>1</td><td>said</td><td>4453</td></tr><tr><td>2</td><td>made</td><td>2456</td></tr><tr><td>3</td><td>according</td><td>1709</td></tr><tr><td>4</td><td>latvia</td><td>1705</td></tr><tr><td>5</td><td>take</td><td>1670</td></tr><tr><td>6</td><td>make</td><td>1588</td></tr><tr><td>7</td><td>know</td><td>1450</td></tr><tr><td>8</td><td>see</td><td>1391</td></tr><tr><td>9</td><td>held</td><td>1322</td></tr><tr><td>10</td><td>come</td><td>1320</td></tr><tr><td>11</td><td>took</td><td>1284</td></tr><tr><td>12</td><td>go</td><td>1278</td></tr><tr><td>13</td><td>become</td><td>1176</td></tr><tr><td>14</td><td>says</td><td>1137</td></tr><tr><td>15</td><td>say</td><td>1108</td></tr><tr><td>16</td><td>get</td><td>1105</td></tr><tr><td>17</td><td>given</td><td>1091</td></tr><tr><td>18</td><td>called</td><td>1072</td></tr><tr><td>19</td><td>found</td><td>1038</td></tr><tr><td>20</td><td>came</td><td>1033</td></tr><tr><td>21</td><td>used</td><td>1018</td></tr><tr><td>22</td><td>taken</td><td>1017</td></tr><tr><td>23</td><td>put</td><td>976</td></tr><tr><td>24</td><td>including</td><td>962</td></tr><tr><td>25</td><td>told</td><td>915</td></tr><tr><td>26</td><td>left</td><td>901</td></tr><tr><td>27</td><td>published</td><td>889</td></tr><tr><td>28</td><td>give</td><td>883</td></tr><tr><td>29</td><td>known</td><td>853</td></tr><tr><td>30</td><td>began</td><td>852</td></tr><tr><td>31</td><td>received</td><td>848</td></tr><tr><td>32</td><td>want</td><td>846</td></tr><tr><td>33</td><td>think</td><td>825</td></tr><tr><td>34</td><td>asked</td><td>816</td></tr><tr><td>35</td><td>continue</td><td>811</td></tr><tr><td>36</td><td>working</td><td>800</td></tr><tr><td>37</td><td>find</td><td>795</td></tr><tr><td>38</td><td>set</td><td>792</td></tr><tr><td>39</td><td>became</td><td>792</td></tr><tr><td>40</td><td>work</td><td>785</td></tr><tr><td>41</td><td>going</td><td>778</td></tr><tr><td>42</td><td>went</td><td>777</td></tr><tr><td>43</td><td>sent</td><td>777</td></tr><tr><td>44</td><td>signed</td><td>756</td></tr><tr><td>45</td><td>live</td><td>727</td></tr><tr><td>46</td><td>done</td><td>706</td></tr><tr><td>47</td><td>help</td><td>706</td></tr><tr><td>48</td><td>reported</td><td>704</td></tr><tr><td>49</td><td>met</td><td>671</td></tr><tr><td>50</td><td>let</td><td>657</td></tr>
+        </table>
+    </div>
+</div>
+
+<div style="text-align:center; margin-top: 50px;">
+    <h2>Top words and bigrams per decade (1950–2010)</h2>
+</div>
+<div class="carousel-pair-container">
+    
+    <div class="carousel-container">
+        <h3>Words (Top 10 per decade)</h3>
+        <div class="carousel-slide" id="word-slide">
+            <div class="decade-item"><h3>1950s</h3><div class="decade-content"><div class="chart-wrapper"><img src="images/decade_word_1950s.png" style="max-width:100%;"></div><div class="table-wrapper-decade"><table class="table"><tr><th>#</th><th>Word</th><th>Count</th></tr><tr><td>1</td><td>soviet</td><td>4380</td></tr><tr><td>2</td><td>people</td><td>2093</td></tr><tr><td>3</td><td>one</td><td>2016</td></tr><tr><td>4</td><td>communist</td><td>1749</td></tr><tr><td>5</td><td>new</td><td>1738</td></tr><tr><td>6</td><td>world</td><td>1624</td></tr><tr><td>7</td><td>war</td><td>1567</td></tr><tr><td>8</td><td>latvia</td><td>1465</td></tr><tr><td>9</td><td>latvian</td><td>1405</td></tr><tr><td>10</td><td>baltic</td><td>1393</td></tr></table></div></div></div><div class="decade-item"><h3>1960s</h3><div class="decade-content"><div class="chart-wrapper"><img src="images/decade_word_1960s.png" style="max-width:100%;"></div><div class="table-wrapper-decade"><table class="table"><tr><th>#</th><th>Word</th><th>Count</th></tr><tr><td>1</td><td>latvian</td><td>1294</td></tr><tr><td>2</td><td>one</td><td>930</td></tr><tr><td>3</td><td>like</td><td>615</td></tr><tr><td>4</td><td>baltic</td><td>594</td></tr><tr><td>5</td><td>time</td><td>552</td></tr><tr><td>6</td><td>latvia</td><td>535</td></tr><tr><td>7</td><td>people</td><td>532</td></tr><tr><td>8</td><td>could</td><td>478</td></tr><tr><td>9</td><td>would</td><td>472</td></tr><tr><td>10</td><td>life</td><td>455</td></tr></table></div></div></div><div class="decade-item"><h3>1970s</h3><div class="decade-content"><div class="chart-wrapper"><img src="images/decade_word_1970s.png" style="max-width:100%;"></div><div class="table-wrapper-decade"><table class="table"><tr><th>#</th><th>Word</th><th>Count</th></tr><tr><td>1</td><td>soviet</td><td>527</td></tr><tr><td>2</td><td>government</td><td>491</td></tr><tr><td>3</td><td>states</td><td>477</td></tr><tr><td>4</td><td>baltic</td><td>342</td></tr><tr><td>5</td><td>mich</td><td>310</td></tr><tr><td>6</td><td>union</td><td>285</td></tr><tr><td>7</td><td>baltie</td><td>282</td></tr><tr><td>8</td><td>mr</td><td>270</td></tr><tr><td>9</td><td>australia</td><td>266</td></tr><tr><td>10</td><td>latvian</td><td>264</td></tr></table></div></div></div><div class="decade-item"><h3>1980s</h3><div class="decade-content"><div class="chart-wrapper"><img src="images/decade_word_1980s.png" style="max-width:100%;"></div><div class="table-wrapper-decade"><table class="table"><tr><th>#</th><th>Word</th><th>Count</th></tr><tr><td>1</td><td>soviet</td><td>3894</td></tr><tr><td>2</td><td>latvian</td><td>3530</td></tr><tr><td>3</td><td>latvia</td><td>2396</td></tr><tr><td>4</td><td>baltic</td><td>2205</td></tr><tr><td>5</td><td>people</td><td>1446</td></tr><tr><td>6</td><td>states</td><td>1399</td></tr><tr><td>7</td><td>union</td><td>1260</td></tr><tr><td>8</td><td>one</td><td>1073</td></tr><tr><td>9</td><td>latvians</td><td>984</td></tr><tr><td>10</td><td>world</td><td>827</td></tr></table></div></div></div><div class="decade-item"><h3>1990s</h3><div class="decade-content"><div class="chart-wrapper"><img src="images/decade_word_1990s.png" style="max-width:100%;"></div><div class="table-wrapper-decade"><table class="table"><tr><th>#</th><th>Word</th><th>Count</th></tr><tr><td>1</td><td>latvia</td><td>6199</td></tr><tr><td>2</td><td>latvian</td><td>4041</td></tr><tr><td>3</td><td>baltic</td><td>2376</td></tr><tr><td>4</td><td>soviet</td><td>1779</td></tr><tr><td>5</td><td>russian</td><td>1774</td></tr><tr><td>6</td><td>states</td><td>1666</td></tr><tr><td>7</td><td>estonia</td><td>1293</td></tr><tr><td>8</td><td>russia</td><td>1290</td></tr><tr><td>9</td><td>minister</td><td>1271</td></tr><tr><td>10</td><td>government</td><td>1266</td></tr></table></div></div></div><div class="decade-item"><h3>2000s</h3><div class="decade-content"><div class="chart-wrapper"><img src="images/decade_word_2000s.png" style="max-width:100%;"></div><div class="table-wrapper-decade"><table class="table"><tr><th>#</th><th>Word</th><th>Count</th></tr><tr><td>1</td><td>latvia</td><td>5869</td></tr><tr><td>2</td><td>latvian</td><td>4086</td></tr><tr><td>3</td><td>also</td><td>1274</td></tr><tr><td>4</td><td>year</td><td>1263</td></tr><tr><td>5</td><td>baltic</td><td>1201</td></tr><tr><td>6</td><td>riga</td><td>1144</td></tr><tr><td>7</td><td>minister</td><td>1139</td></tr><tr><td>8</td><td>president</td><td>1134</td></tr><tr><td>9</td><td>new</td><td>1091</td></tr><tr><td>10</td><td>one</td><td>1086</td></tr></table></div></div></div><div class="decade-item"><h3>2010s</h3><div class="decade-content"><div class="chart-wrapper"><img src="images/decade_word_2010s.png" style="max-width:100%;"></div><div class="table-wrapper-decade"><table class="table"><tr><th>#</th><th>Word</th><th>Count</th></tr><tr><td>1</td><td>latvia</td><td>976</td></tr><tr><td>2</td><td>latvian</td><td>850</td></tr><tr><td>3</td><td>russian</td><td>668</td></tr><tr><td>4</td><td>one</td><td>475</td></tr><tr><td>5</td><td>russia</td><td>371</td></tr><tr><td>6</td><td>people</td><td>357</td></tr><tr><td>7</td><td>moscow</td><td>342</td></tr><tr><td>8</td><td>says</td><td>319</td></tr><tr><td>9</td><td>also</td><td>318</td></tr><tr><td>10</td><td>soviet</td><td>315</td></tr></table></div></div></div>
+        </div>
+        <div class="carousel-nav">
+            <button class="nav-button" onclick="changeWordSlide(-1)">&#10094;</button>
+            <button class="nav-button" onclick="changeWordSlide(1)">&#10095;</button>
+        </div>
+    </div>
+    
+    <div class="carousel-container">
+        <h3>Bigrams (Top 10 per decade)</h3>
+        <div class="carousel-slide" id="bigram-slide">
+            <div class="decade-item"><h3>1950s</h3><div class="decade-content"><div class="chart-wrapper"><img src="images/decade_bigram_1950s.png" style="max-width:100%;"></div><div class="table-wrapper-decade"><table class="table"><tr><th>#</th><th>Bigram</th><th>Count</th></tr><tr><td>1</td><td>soviet union</td><td>948</td></tr><tr><td>2</td><td>baltic states</td><td>486</td></tr><tr><td>3</td><td>per cent</td><td>456</td></tr><tr><td>4</td><td>united states</td><td>422</td></tr><tr><td>5</td><td>communist party</td><td>309</td></tr><tr><td>6</td><td>united nations</td><td>291</td></tr><tr><td>7</td><td>world war</td><td>287</td></tr><tr><td>8</td><td>iron curtain</td><td>248</td></tr><tr><td>9</td><td>soviet russia</td><td>228</td></tr><tr><td>10</td><td>free world</td><td>192</td></tr></table></div></div></div><div class="decade-item"><h3>1960s</h3><div class="decade-content"><div class="chart-wrapper"><img src="images/decade_bigram_1960s.png" style="max-width:100%;"></div><div class="table-wrapper-decade"><table class="table"><tr><th>#</th><th>Bigram</th><th>Count</th></tr><tr><td>1</td><td>baltic states</td><td>107</td></tr><tr><td>2</td><td>united states</td><td>95</td></tr><tr><td>3</td><td>ruth speirs</td><td>86</td></tr><tr><td>4</td><td>new york</td><td>85</td></tr><tr><td>5</td><td>soviet union</td><td>75</td></tr><tr><td>6</td><td>short stories</td><td>65</td></tr><tr><td>7</td><td>world war</td><td>64</td></tr><tr><td>8</td><td>op cit</td><td>64</td></tr><tr><td>9</td><td>velta sniķere</td><td>54</td></tr><tr><td>10</td><td>latvian language</td><td>51</td></tr></table></div></div></div><div class="decade-item"><h3>1970s</h3><div class="decade-content"><div class="chart-wrapper"><img src="images/decade_bigram_1970s.png" style="max-width:100%;"></div><div class="table-wrapper-decade"><table class="table"><tr><th>#</th><th>Bigram</th><th>Count</th></tr><tr><td>1</td><td>soviet union</td><td>259</td></tr><tr><td>2</td><td>baltie states</td><td>160</td></tr><tr><td>3</td><td>baltic states</td><td>140</td></tr><tr><td>4</td><td>prime minister</td><td>117</td></tr><tr><td>5</td><td>united states</td><td>104</td></tr><tr><td>6</td><td>grand rapids</td><td>89</td></tr><tr><td>7</td><td>kalamazoo mich</td><td>83</td></tr><tr><td>8</td><td>rapids mich</td><td>83</td></tr><tr><td>9</td><td>foreign affairs</td><td>68</td></tr><tr><td>10</td><td>dc jure</td><td>67</td></tr></table></div></div></div><div class="decade-item"><h3>1980s</h3><div class="decade-content"><div class="chart-wrapper"><img src="images/decade_bigram_1980s.png" style="max-width:100%;"></div><div class="table-wrapper-decade"><table class="table"><tr><th>#</th><th>Bigram</th><th>Count</th></tr><tr><td>1</td><td>soviet union</td><td>1099</td></tr><tr><td>2</td><td>baltic states</td><td>588</td></tr><tr><td>3</td><td>human rights</td><td>436</td></tr><tr><td>4</td><td>united states</td><td>331</td></tr><tr><td>5</td><td>baltie states</td><td>278</td></tr><tr><td>6</td><td>communist party</td><td>240</td></tr><tr><td>7</td><td>estonia latvia</td><td>210</td></tr><tr><td>8</td><td>latvian people</td><td>190</td></tr><tr><td>9</td><td>popular front</td><td>184</td></tr><tr><td>10</td><td>occupied latvia</td><td>162</td></tr></table></div></div></div><div class="decade-item"><h3>1990s</h3><div class="decade-content"><div class="chart-wrapper"><img src="images/decade_bigram_1990s.png" style="max-width:100%;"></div><div class="table-wrapper-decade"><table class="table"><tr><th>#</th><th>Bigram</th><th>Count</th></tr><tr><td>1</td><td>baltic states</td><td>766</td></tr><tr><td>2</td><td>soviet union</td><td>517</td></tr><tr><td>3</td><td>prime minister</td><td>452</td></tr><tr><td>4</td><td>human rights</td><td>287</td></tr><tr><td>5</td><td>united states</td><td>272</td></tr><tr><td>6</td><td>foreign minister</td><td>266</td></tr><tr><td>7</td><td>baltie states</td><td>245</td></tr><tr><td>8</td><td>million lats</td><td>223</td></tr><tr><td>9</td><td>supreme council</td><td>212</td></tr><tr><td>10</td><td>estonia latvia</td><td>201</td></tr></table></div></div></div><div class="decade-item"><h3>2000s</h3><div class="decade-content"><div class="chart-wrapper"><img src="images/decade_bigram_2000s.png" style="max-width:100%;"></div><div class="table-wrapper-decade"><table class="table"><tr><th>#</th><th>Bigram</th><th>Count</th></tr><tr><td>1</td><td>baltic states</td><td>343</td></tr><tr><td>2</td><td>prime minister</td><td>334</td></tr><tr><td>3</td><td>co operation</td><td>331</td></tr><tr><td>4</td><td>european union</td><td>297</td></tr><tr><td>5</td><td>foreign minister</td><td>272</td></tr><tr><td>6</td><td>united states</td><td>224</td></tr><tr><td>7</td><td>last year</td><td>221</td></tr><tr><td>8</td><td>foreign affairs</td><td>219</td></tr><tr><td>9</td><td>vike freiberga</td><td>188</td></tr><tr><td>10</td><td>vaira vike</td><td>158</td></tr></table></div></div></div><div class="decade-item"><h3>2010s</h3><div class="decade-content"><div class="chart-wrapper"><img src="images/decade_bigram_2010s.png" style="max-width:100%;"></div><div class="table-wrapper-decade"><table class="table"><tr><th>#</th><th>Bigram</th><th>Count</th></tr><tr><td>1</td><td>prime minister</td><td>90</td></tr><tr><td>2</td><td>russian federation</td><td>76</td></tr><tr><td>3</td><td>north caucasus</td><td>71</td></tr><tr><td>4</td><td>pols goubls</td><td>68</td></tr><tr><td>5</td><td>goubls paul</td><td>66</td></tr><tr><td>6</td><td>paul goble</td><td>65</td></tr><tr><td>7</td><td>soviet union</td><td>52</td></tr><tr><td>8</td><td>united states</td><td>50</td></tr><tr><td>9</td><td>ethnic russian</td><td>43</td></tr><tr><td>10</td><td>ethnic russians</td><td>42</td></tr></table></div></div></div>
+        </div>
+        <div class="carousel-nav">
+            <button class="nav-button" onclick="changeBigramSlide(-1)">&#10094;</button>
+            <button class="nav-button" onclick="changeBigramSlide(1)">&#10095;</button>
+        </div>
+    </div>
+    
+</div>
+
+<script>
+    let currentWordSlide = 0; 
+    let currentBigramSlide = 0;
+    const wordSlides = document.querySelectorAll('#word-slide .decade-item');
+    const bigramSlides = document.querySelectorAll('#bigram-slide .decade-item');
+    const totalWordSlides = wordSlides.length;
+    const totalBigramSlides = bigramSlides.length;
+    const wordSlideContainer = document.getElementById('word-slide');
+    const bigramSlideContainer = document.getElementById('bigram-slide');
+    
+    function updateWordSlidePosition() {
+        const offset = -currentWordSlide * 100;
+        wordSlideContainer.style.transform = `translateX(${offset}%)`;
+    }
+    function updateBigramSlidePosition() {
+        const offset = -currentBigramSlide * 100;
+        bigramSlideContainer.style.transform = `translateX(${offset}%)`;
+    }
+
+    if (totalWordSlides > 0) updateWordSlidePosition();
+    if (totalBigramSlides > 0) updateBigramSlidePosition();
+    
+    window.changeWordSlide = function(direction) {
+        if (totalWordSlides === 0) return;
+        currentWordSlide = (currentWordSlide + direction + totalWordSlides) % totalWordSlides;
+        updateWordSlidePosition();
+    };
+    window.changeBigramSlide = function(direction) {
+        if (totalBigramSlides === 0) return;
+        currentBigramSlide = (currentBigramSlide + direction + totalBigramSlides) % totalBigramSlides;
+        updateBigramSlidePosition();
+    };
+</script>
+</body>
+</html>
