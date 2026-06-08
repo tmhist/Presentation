@@ -1,8 +1,7 @@
 ---
-title: "Voices Across Borders: "
-subtitle: "Analyzing Public Discourse in the Latvian Emigration Press"
+title: "Latvian Diaspora Press Published in English-Speaking Countries in the Second Half of the 20th Century"
 author: "Timur Mitrofanov"
-date: "May 29, 2026"
+date: "June 25, 2026"
 format:
   revealjs:
     theme: white
@@ -12,7 +11,7 @@ format:
     controls: true
     width: 1400
     height: 800
-    footer: "Voices Across Borders · Timur Mitrofanov"
+    footer: "Latvian Diaspora Press Published in English-Speaking Countries in the Second Half of the 20th Century · Timur Mitrofanov"
     embed-resources: false
 ---
 
@@ -82,19 +81,19 @@ format:
 
 ### Multigram <br><span style="font-size: 0.6em; font-weight: normal; color: gray;">(Words & phrases combined)</span>
 
-<iframe src="multi-gram_topics_over_time.html" width="100%" height="680px" style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+<iframe src="multi-gram_topics_over_time.html" width="100%" height="650px" style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
 
 ### Unigram <br><span style="font-size: 0.6em; font-weight: normal; color: gray;">(Single words)</span>
 
-<iframe src="unigram_topics_over_time.html" width="100%" height="680px" style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+<iframe src="unigram_topics_over_time.html" width="100%" height="650px" style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
 
 ### Bigram <br><span style="font-size: 0.6em; font-weight: normal; color: gray;">(Two-word phrases)</span>
 
-<iframe src="bigram_topics_over_time.html" width="100%" height="680px" style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+<iframe src="bigram_topics_over_time.html" width="100%" height="650px" style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
 
 ### Trigram <br><span style="font-size: 0.6em; font-weight: normal; color: gray;">(Three-word phrases)</span>
 
-<iframe src="trigram_topics_over_time.html" width="100%" height="680px" style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+<iframe src="trigram_topics_over_time.html" width="100%" height="650px" style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
 
 :::
 
@@ -109,4 +108,18 @@ format:
 ```{=html}
 <iframe src="country_mentions_interactive.html" width="100%" height="680px"
   style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
+```
+
+## Entities identified by GLiNER 
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+DT::datatable(
+  data.table::fread("extracted_entities.csv"),
+  rownames = FALSE,
+  options = list(pageLength = 10, scrollX = TRUE)
+)
 ```
