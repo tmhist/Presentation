@@ -100,7 +100,7 @@ format:
 ## Geographical and Geopolitical entities
 
 ```{=html}
-<iframe src="Map_journal_origins_3.html" width="100%" height="680px"
+<iframe src="Map_timeline.html" width="100%" height="680px"
   style="border:none; border-radius:8px; background:white;" loading="lazy"></iframe>
 ```
 
